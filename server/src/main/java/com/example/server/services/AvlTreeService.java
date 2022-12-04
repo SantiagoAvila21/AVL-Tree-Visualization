@@ -20,4 +20,7 @@ public class AvlTreeService {
         return repo.delNode(value);
     }
 
+    public JSONObject clearTree(){
+        return repo.clearTree();
+    }
 }

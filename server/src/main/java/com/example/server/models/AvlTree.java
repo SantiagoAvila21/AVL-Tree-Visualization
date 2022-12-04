@@ -105,8 +105,9 @@ public class AvlTree <T extends Comparable> extends BinarySearchTree<T> {
 		else return checkBalance(node.getParent());
 	}
 
+	//Parsear el Arbol AVL a JSON entendible por el cliente
 	public JSONObject setupAvl(Node node){
-		if(node == null) return null;
+		if(node == null) return new JSONObject();
 		LinkedHashMap<String,Object> map = new LinkedHashMap<String, Object>();
 
 		JSONArray array = new JSONArray();

@@ -18,4 +18,9 @@ public class AvlTreeRepository{
         Arbol.deleteNode(Arbol.findNode(value));
         return Arbol.setupAvl(Arbol.getRoot());
     }
+
+    public JSONObject clearTree(){
+        Arbol = new AvlTree<Integer>();
+        return Arbol.setupAvl(Arbol.getRoot());
+    }
 }

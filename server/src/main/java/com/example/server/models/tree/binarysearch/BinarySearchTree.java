@@ -53,7 +53,9 @@ public class BinarySearchTree <T extends Comparable> extends BinaryTree<T>{
 			
 			// No tendra ningun hijo por lo cual es una hoja
 			if(candidate == null) {
-				node.getParent().getNodeChilds().set(node.getParent().getNodeChilds().indexOf(node), null);
+				// No tiene hijos ni padre por lo que es una hoja raiz
+				if(node.getParent() == null) this.setRoot(null);
+				else node.getParent().getNodeChilds().set(node.getParent().getNodeChilds().indexOf(node), null);
 				return;
 			}else {
 				// El candidato al cambio sera el hijo(Subarbol) directo por la derecha
