@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.formsContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 800px){
+  .formsContainer{
+    flex-direction: column;
+  }
+}
+
+.clearBtn{
+  border: none;
+  height: 25px;
+  background-color: #b91919;
+  width: 90px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.clearBtn:hover{
+  background-color: #5f1818;
+}
